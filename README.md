@@ -7,4 +7,4 @@
 Flask
 
 ## 使用方法
-`python serv.py`
+`python main.py`
