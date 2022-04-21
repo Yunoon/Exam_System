@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+</head>
+
+<body>
+    恁好：{{ name }}
+
+    <form class="layui-form" action="/jug/{{ exam_type }}/{{ name }}" method="post">
+<!--        <input name="name" value="{{ name }}" style="display:none">-->
+        {% for i in list[1:] %} {% if i[1] == "单选题" %}
+        <div class="layui-form-item">
+            <div class="">单选题：{{ i[2] }}</div>
+            <div class="layui-input-block">
+                <input type="radio" name="answer{{ i[0] }}" value="A" title="{{ i[3] }}">
+                <input type="radio" name="answer{{ i[0] }}" value="B" title="{{ i[4] }}">
+                <input type="radio" name="answer{{ i[0] }}" value="C" title="{{ i[5] }}">
+                <input type="radio" name="answer{{ i[0] }}" value="D" title="{{ i[6] }}">
+            </div>
+        </div>
+
+        {% elif i[1] == "判断题" %}
+        <div class="layui-form-item">
+            <div class="">判断题：{{ i[2] }}</div>
+            <div class="layui-input-block">
+                <input type="radio" name="answer" value="1" title="{{ i[3] }}">
+                <input type="radio" name="answer" value="0" title="{{ i[4] }}">
+            </div>
+        </div>
+        {% elif i[1] == "多选题" %}
+        <div class="layui-form-item">
+            <div class="">多选题：{{ i[2] }}</div>
+            <div class="layui-input-block">
+                <input type="checkbox" name="answer{{ i[0] }}" lay-skin="primary" value="A" title="{{ i[3] }}">
+                <input type="checkbox" name="answer{{ i[0] }}" lay-skin="primary" value="B" title="{{ i[4] }}">
+                <input type="checkbox" name="answer{{ i[0] }}" lay-skin="primary" value="C" title="{{ i[5] }}">
+                <input type="checkbox" name="answer{{ i[0] }}" lay-skin="primary" value="D" title="{{ i[6] }}">
+            </div>
+        </div>
+        {% endif %} {% endfor %}
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+    <!--您的Layui代码start-->
+    <script type="text/javascript">
+        layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
+            var laydate = layui.laydate //日期
+                ,
+                laypage = layui.laypage //分页
+                ,
+                layer = layui.layer //弹层
+                ,
+                table = layui.table //表格
+                ,
+                carousel = layui.carousel //轮播
+                ,
+                upload = layui.upload //上传
+                ,
+                element = layui.element; //元素操作 等等...
+
+            /*layer弹出一个示例*/
+
+            // layer.msg('Hello World');
+        });
+    </script>
+</body>
+
+</html>

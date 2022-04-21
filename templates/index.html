@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+</head>
+
+<body>
+
+
+<form class="layui-form" action="/exam">
+  <div class="layui-form-item">
+    <label class="layui-form-label">姓名</label>
+    <div class="layui-input-block">
+      <input type="text" name="name" required  lay-verify="required" placeholder="请输入你的姓名" autocomplete="off" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">考试类型</label>
+    <div class="layui-input-block">
+      <select name="exam_type" lay-verify="required" lay-search>
+        <option value="aii">AI</option>
+        <option value="IOTT">IOT</option>
+        <option value="pythonn">PYTHON</option>
+        <option value="webb">WEB</option>
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+
+
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+    <!--您的Layui代码start-->
+    <script type="text/javascript">
+        layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
+            var laydate = layui.laydate //日期
+                ,
+                laypage = layui.laypage //分页
+                ,
+                layer = layui.layer //弹层
+                ,
+                table = layui.table //表格
+                ,
+                carousel = layui.carousel //轮播
+                ,
+                upload = layui.upload //上传
+                ,
+                element = layui.element; //元素操作 等等...
+
+            /*layer弹出一个示例*/
+
+            // layer.msg('Hello World');
+        });
+    </script>
+</body>
+
+</html>

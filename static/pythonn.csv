@@ -1,0 +1,39 @@
+序号,类型,题干,A,B,C,D,答案
+1,单选题,"以下程序的输出结果是(    )。 ls = [""浣熊"",""豪猪"",""艾草松鸡"",""棉尾兔"",""叉角羚""] x = ""豪猪"" print(ls.index(x,0))",0,-4,-3,1, D
+2,单选题," 以下程序的输出结果是(    )。 def func(a,*b): for item in b: a += item return a m = 0print(func(m,1,1,2,3,5,7,12,21,33)) ",33,0,7,85, D
+3,单选题,下面代码的输出结果是(    )。 listV = list(range(5))print(2 in listV), False,0,-1, True, D
+4,单选题,"以下程序的不可能输出结果是(    )。from random import *;print(round(random(),2))",0.47,0.54,0.27,1.87, D
+5,单选题,下列表达式的运算结果是(    )。 a = 100 b = False a * b > -1, False,1,0, True, D
+6,单选题," str =""Python语言程序设计""，表达式 str.isnumeric() 的结果是(    )。", True,1,0, False, D
+7,单选题,以下程序的输出结果是(    )。 s = 0 def fun(num): try: s += num return s except: return 0 return 5 print(fun(2)) ,0,2, UnboundLocalError ,5, A
+8,单选题,"以下程序的输出结果是(    )。 x = ['90','87','90'] n = 90 print(x.count(n)) ",1,2, None ,0, D
+9,单选题,运行以下程序，输出结果的是(    )。print(5/2),3,2,2.5,2.5, C
+10,单选题, 定义 x=2.6，表达式 int(x) 的结果是(    )。,3,2.6,2,2, D
+11,单选题,"下面代码的输出结果是(    )。TempStr = ""Pi=3.141593"";eval(TempStr[3:-1])",3.14159,3.141593, Pi=3.14,3.1416, A
+12,单选题,"下面代码的执行结果是(    )。ls=[[1,2,3],[[4,5],6],[7,8]];print(len(ls))",3,4,8,1, A
+13,单选题,下面代码的执行结果是(    )。 abs(-3+4j) ,4,5, 执行错误 ,3, B
+14,单选题,"以下程序的输出结果是(    )。ls =list(""the sky is blue"");a = ls.index('s',5,10);print(a)",4,5,10,9, D
+15,单选题,表达式print(float(complex(10+5j).imag))的结果是(    )。,10,5,10,5, D
+16,单选题," 表达式 divmod(20,3) 的结果是(    )。"," 6, 2",6,2," (6, 2)", D
+17,单选题,"下面代码的输出结果是(    )。 sum = 1.0 for num in range(1,4): sum+=num print(sum) ",6,7,1,7, B
+18,单选题,"以下程序的输出结果是(    )。 for num in range(1,4): sum *= num print(sum) ",6,7,7, TypeError 出错 , D
+19,单选题,"如下：   str1 = ""RunooBexample....wow!!!"" str2 = ""exam""; Print(str1.find(str2, 5)) 打印的结果是（）",6,7,8,-1,B
+20,单选题," 字典 d={'Name': 'Kate', 'No': '1001', 'Age': '20'}，表达式len(d)的值为(    )。",12,9,6,3, D
+21,多选题,"下面对count（），index(), find()方法描述错误的是（）",count() 方法用于统计字符串里某个字符出现的次数, find() 方法检测字符串中是否包含子字符串 str  如果包含子字符串返回开始的索引值，否则会报一个异常, index() 方法检测字符串中是否包含子字符串 str， 如果str不在 返回-1,以上都错误,BC
+22,多选题,以下是正确的字符串（）," 'abc""ab""  ","abc""ab' ","""abc""ab"" ","""abc\""ab""",BD
+23,多选题,"  def chanageList(list):     list.append("" end"") print(""list"",list) #调用 strs =['1','2'] chanageList(strs) print(""strs"",strs) 下面对 strs 和 list 的值输出正确的是()","strs ['1','2']                ","list  ['1','2']","list ['1','2','end']        ","strs  ['1','2','end']  ",CD
+24,多选题,class  Hello(): pass 下面说明错误的是（）,该类实例中包含__dir__（）方法,该类实例中包含__hash__（）方法,该类实例中只包含__dir__（），不包含__hash__（）,该类没有定义任何方法，所以该实例中没有包含任何方法,CD
+25,判断题,Python 3.x完全兼容Python 2.x。,正确,错误,,,B
+26,判断题,Python 3.x和Python 2.x唯一的区别就是：print在Python 2.x中是输出语句，而在Python 3.x中是输出函数。,正确,错误,,,B
+27,判断题,在Windows平台上编写的Python程序无法在Unix平台运行。,正确,错误,,,B
+28,判断题,不可以在同一台计算机上安装多个Python版本。,正确,错误,,,B
+29,判断题,已知 x = 3，那么赋值语句 x = 'abcedfg' 是无法正常执行的。,正确,错误,,,B
+30,判断题,继承自threading.Thread类的派生类中不能有普通的成员方法。,正确,错误,,,B
+31,判断题,扩展库os中的方法remove()可以删除带有只读属性的文件。,正确,错误,,,B
+32,判断题,"使用内置函数open()且以""w""模式打开的文件，文件指针默认指向文件尾。",正确,错误,,,B
+33,判断题,使用内置函数open()打开文件时，只要文件路径正确就总是可以正确打开的。,正确,错误,,,B
+34,判断题,Python变量使用前必须先声明，并且一旦声明就不能再当前作用域内改变其类型。,正确,错误,,,B
+35,判断题,在任何时刻相同的值在内存中都只保留一份,正确,错误,,,B
+36,判断题,在Python中可以使用if作为变量名。,正确,错误,,,B
+37,判断题,9999**9999这样的命令在Python中无法运行。,正确,错误,,,B
+38,判断题,3+4j不是合法的Python表达式。,正确,错误,,,B
